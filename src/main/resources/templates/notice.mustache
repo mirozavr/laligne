@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div>
+    <form method="post">
+    <input type="text" name="text" placeholder="Input notice"/>
+    <input type="text" name="tag" placeholder="Search by tag"/>
+    <button type="submit">Add</button>
+    </div>
+    
+   <div>List of notices</div>
+   {{#notices}}
+   <div>
+   <b>{{id}}
+   <span>{{text}}</span>
+   <i>{{tag}}</i>
+   </div>
+   {{/notices}}
+</body>
+</html>

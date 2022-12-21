@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <body>
+ <div>
+     <form method="post">
+        <input type="text" name="pickupPoint" placeholder="input pickup Point">
+        <input type="text" name="deliveryPoint" placeholder="input delivery Point">
+        <input type="text" name="weight" placeholder="input weight">
+        <input type="text" name="height" placeholder="input height">
+        <input type="text" name="length" placeholder="input length">
+        <input type="text" name="width" placeholder="input width">
+        <input type="checkbox" name="fragileСargo">
+        <input type="text" name="pickupDate" placeholder="input pickupDate">
+        <input type="text" name="pickupMonth" placeholder="input pickupMonth">
+        <input type="text" name="pickupYear" placeholder="input pickupYear">
+        <input type="text" name="deliveryDate" placeholder="input deliveryDate">
+        <input type="text" name="deliveryMonth" placeholder="input deliveryMonth">
+        <input type="text" name="deliveryYear" placeholder="input deliveryYear">
+        <input type="text" name="desiredPrice" placeholder="input desiredPrice">
+        <button type="submit">Add order</button>
+     </form>
+  </div>
+  <div>Order creation form</div>
+  {{#orders}}
+  <div>
+   <b>{{id}}</b>
+  <span>{{pickupPoint}}</span>
+  <br>
+  <span>{{deliveryPoint}}</span>
+  <br>
+  <span>{{weight}}</span>
+  <br>
+  <span>{{height}}</span>
+  <span{{length}}</span>
+  <span>{{width}}</span>
+  <br>
+ <b>hrupkijGruz</b>
+ <td>
+  <input type="checkbox"
+    {{#required}}
+      disabled="disabled" checked="checked"
+    {{/required}}>
+</td>
+  <br>
+  <span{{pickupDate}}</span>
+  <br>
+  <span{{pickupMonth}}</span>
+  <br>
+  <span{{pickupYear}}</span>
+  <br>
+  <span{{deliveryDate}}</span>
+  <br>
+  <span{{deliveryMonth}}</span>
+  <br>
+  <span{{deliveryYear}}</span>
+  <br>
+  <span{{desiredPrice}}</span>
+  </div>
+  {{/orders}}
+  </body>
+</html>
