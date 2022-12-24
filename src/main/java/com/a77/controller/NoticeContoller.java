@@ -1,5 +1,6 @@
 package com.a77.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,17 @@ public class NoticeContoller {
 		
 		return "notice";
 	}
+	
+	@PostMapping("filter")
+	public String filter(@RequestParam String filter, Map<String, Object> model) {
+		
+		List<Notice> notices = noticeRepo.findByTag(filter);
+		
+		model.put("notices", notices);
+		
+		return "notice";
+	}
+	
 
 }
 

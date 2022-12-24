@@ -17,7 +17,7 @@ public class GreetingController {
 		return "greeting";
 	}
 	
-	@GetMapping
+	@GetMapping("/")
 	public String main(Map<String, Object> model) {
 		model.put("some", "Hello, letscode!");
 		return "main";

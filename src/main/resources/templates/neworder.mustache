@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
   <body>
+  <div>
+       <form action="/logout" method="post">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+        <input type="submit" value="Sign Out"/>
+       </form>
+    </div>
  <div>
      <form method="post">
         <input type="text" name="pickupPoint" placeholder="input pickup Point">
@@ -17,6 +23,7 @@
         <input type="text" name="deliveryMonth" placeholder="input deliveryMonth">
         <input type="text" name="deliveryYear" placeholder="input deliveryYear">
         <input type="text" name="desiredPrice" placeholder="input desiredPrice">
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
         <button type="submit">Add order</button>
      </form>
   </div>
